@@ -79,7 +79,13 @@ function ubah ($data){
 }
 
 function cari ($keyword){
-    $query = "SELECT * FROM mahasantri WHERE nama= "
+    $query = "SELECT * FROM mahasantri WHERE 
+    nama_mahasiswa LIKE  '%$keyword%' OR
+    nim LIKE  '%$keyword%' OR
+    nama_mabna LIKE '%$keyword%'
+    ";
+
+    return query($query);
 }
 
 ?>

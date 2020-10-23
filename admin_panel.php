@@ -5,7 +5,7 @@ $mahasiswa = query("SELECT * FROM mahasantri");
 
 //tombol cari ditekan
 if(isset ($_POST ["cari"])){
-    $mahasiswa = cari ($_POST["keyword"])
+    $mahasiswa = cari ($_POST["keyword"]);
 }
 
 
@@ -139,7 +139,7 @@ if(isset ($_POST ["cari"])){
                                 </div>
                             </div>
                             <div class="col-md-6 ">
-                                <button type="submit" class="btn btn-primary " id="submit" name="submit">Cari</button>
+                                <button type="submit" class="btn btn-primary " id="cari" name="cari">Cari</button>
                             </div>
 
                         </div>
