@@ -14,7 +14,7 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/0801180830.js" crossorigin="anonymous"></script>
-    <title>Manage Wisata - MSN</title>
+    <title>Pendaftaran</title>
 </head>
 
 <body>
@@ -103,13 +103,8 @@
         <!-- header -->
         <div class="row header">
             <div class="col-md-12">
-                <p class="header-title"> Candi</p>
-                <nav aria-label="breadcrumb sitemap-ts">
-                    <ol class="breadcrumb" style="background: none;">
-                        <li class="breadcrumb-item"><a href="wisata.html" style="color: #c7c7c7;">Wisata</a></li>
-                        <li style="color:black;" class="breadcrumb-item active" aria-current="page">Details Wisata</li>
-                    </ol>
-                </nav>
+                <p class="header-title"> Pendaftran Ma'had Al-jamiah</p>
+
             </div>
         </div>
         <!-- akhir header -->
@@ -123,101 +118,95 @@
             <!-- thumbnail -->
             <div class="  col-md-12">
                 <div class="item-big-report col-md-12">
-                    <div class="row">
-                        <div class="col-md-4 overlay-box">
-                            <a href=""  id="open_file" class="btn btn-primary btn-third-tiketsaya ">Replace</a>
+                    <form action="" method="post">
+                        <div class="row " style="padding-left: 30px;">
+                            <p>Form Pendaftaran</p>
                         </div>
-                        <div class="col-md-4 thumbnail-box" style="padding-left: 30px;">
-                            <p class="label-thumbnail">Thumbnails Wisata</p>
-                            <img src="images/muhammad.jpeg" alt="" class="thumbnail-wisata">
-                        </div>
+                        <div class="row">
+                            <!--form kiri-->
+                            <div class="col-md-5 " style="padding-left: 30px;">
 
-                        <!-- form -->
-                        <div class="col-md-5" style="margin-left: 100px;">
-                            <form action="dashboard.html">
-                                <div class="form-group">                                    
-                                    <input type="file"   id="image_file" >
-                                </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1" class="title-input-primary-username">Nama
-                                        Wisata</label>
+                                    <label for="exampleInputEmail1" class="title-input-primary-username">Nama Lengkap</label>
                                     <input type="text" class="form-control input-type-primary-tiketsaya"
-                                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Wisata">
+                                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Lengkap">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1" class="title-input-primary-username">Lokasi
-                                        Wisata</label>
+                                    <label for="exampleInputEmail1" class="title-input-primary-username">Fakultas/Jurusan</label>
                                     <input type="text" class="form-control input-type-primary-tiketsaya"
-                                        id="exampleInputPassword1" placeholder="Lokasi">
+                                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Fakultas/Jurusan">
                                 </div>
                                 <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label for="exampleInputPassword1"
-                                                class="title-input-primary-username">Harga Tiket ($US)</label>
-                                            <input type="number" class="form-control input-type-primary-tiketsaya"
-                                                id="exampleInputPassword1" placeholder="Harga">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="exampleInputPassword1"
-                                                class="title-input-primary-username">Tanggal</label>
-                                            <input type="text" class="form-control input-type-primary-tiketsaya"
-                                                id="exampleInputPassword1" placeholder="Tanggal">
-                                        </div>
+                                    <label for="exampleInputEmail1" class="title-input-primary-username">Tempat  dan Tanggal Lahir</label>
+                                    <input type="text" class="form-control input-type-primary-tiketsaya"
+                                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tempat dan Tanggal Lahir">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1" class="title-input-primary-username">Nama Orang Tua</label>
+                                    <input type="text" class="form-control input-type-primary-tiketsaya"
+                                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Orang Tua">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1" class="title-input-primary-username">Alamat</label>
+                                    <input type="text" class="form-control input-type-primary-tiketsaya"
+                                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Alamat">
+                                </div>
 
-                                    </div>
-                                </div>
-                                <div class="form-group" style="margin-top: -20px;">
-                                    <label for="exampleFormControlTextarea1"
-                                        class="input-type-primary-tiketsaya">Ketentuan</label>
-                                    <textarea class="form-control input-type-primary-tiketsaya"
-                                        id="exampleFormControlTextarea1" rows="3"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1"
-                                        class="input-type-primary-tiketsaya">Deskripsi Wisata</label>
-                                    <textarea class="form-control input-type-primary-tiketsaya"
-                                        id="exampleFormControlTextarea1" rows="3"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <label for="exampleInputPassword1" class="title-input-primary-username">Has
-                                                Wifi?</label>
-                                            <input type="text" class="form-control input-type-primary-tiketsaya"
-                                                id="exampleInputPassword1" placeholder="Wifi">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="exampleInputPassword1" class="title-input-primary-username">Has
-                                                Spot?</label>
-                                            <input type="number" class="form-control input-type-primary-tiketsaya"
-                                                id="exampleInputPassword1" placeholder="Spot?">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label for="exampleInputPassword1" class="title-input-primary-username">Has
-                                                Festival</label>
-                                            <input type="text" class="form-control input-type-primary-tiketsaya"
-                                                id="exampleInputPassword1" placeholder="Festival">
-                                        </div>
 
-                                    </div>
+                            </div>
+                            <!-- akhir form kiri-->
+                            <!-- form kanan -->
+                            <div class="col-md-4" style="margin-left: 100px;">
+
+
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1" class="title-input-primary-username">NIM</label>
+                                    <input type="text" class="form-control input-type-primary-tiketsaya"
+                                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="NIM">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1" class="title-input-primary-username">No
+                                        HP</label>
+                                    <input type="text" class="form-control input-type-primary-tiketsaya"
+                                        id="exampleInputPassword1" placeholder="No hp">
+                                </div>
+                                <div class="form-group">
+
+                                    <label for="exampleInputPassword1" class="title-input-primary-username">Tanggal
+                                        Lahir</label>
+                                    <input type="number" class="form-control input-type-primary-tiketsaya"
+                                        id="exampleInputPassword1">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1" class="title-input-primary-username">No HP Orang
+                                        Tua/Wali</label>
+                                    <input type="text" class="form-control input-type-primary-tiketsaya"
+                                        id="exampleInputPassword1" placeholder="No HP Orang Tua/Wali">
+
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-primary-tiketsaya">Update</button>
                                 <button type="reset" class="btn btn-primary btn-secondary-tiketsaya">Cancel</button>
-                            </form>
-                        </div>
-                        <!-- akhir form -->
 
-                    </div>
+                            </div>
 
 
+
+
+                    </form>
                 </div>
+                <!-- akhir form -->
 
             </div>
-            <!-- akhir bagian kanan -->
+
 
         </div>
-        <!-- akhir big report group -->
+
+    </div>
+    <!-- akhir bagian kanan -->
+
+    </div>
+    <!-- akhir big report group -->
     </div>
     <!-- akhir main content -->
 
