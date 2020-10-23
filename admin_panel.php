@@ -124,7 +124,7 @@ $mahasiswa =query("SELECT * FROM mahasantri");
                             <td scope="row user-table-item"> <?=$i; ?></td>
                             <td>
                                 <a href=""> ubah |</a>
-                                <a href=""> hapus</a>
+                                <a href="hapus.php?id= <?= $row["id_mhs"]; ?> "> hapus </a>
                             </td>
                             <td><?= $row["nama_mahasiswa"]; ?></td>
                             <td><?=$row["nim"]; ?></td>
