@@ -123,7 +123,7 @@ $mahasiswa =query("SELECT * FROM mahasantri");
                           <tr>
                             <td scope="row user-table-item"> <?=$i; ?></td>
                             <td>
-                                <a href=""> ubah |</a>
+                                <a href="ubah.php?id= <?= $row["id"]; ?>"> ubah |</a>
                                 <a href="hapus.php?id= <?= $row["id"]; ?> "  onclick="return confirm('yakin?');"> hapus </a>
                             </td>
                             <td><?= $row["nama_mahasiswa"]; ?></td>

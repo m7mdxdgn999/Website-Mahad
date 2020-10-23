@@ -1,23 +1,30 @@
 <?php
 
 require 'fungction.php';
+
+//ambil data dari url
+$id=$_GET["id"];
+
+$mhs=query("SELECT * FROM  mahasantri WHERE id=$id") [0];
+
+
 // cek apkah tombol submit  sudah ditentukan
 if (isset($_POST["submit"])) {
 
    
    
    //cek apkah data berhasil ditambhakan
-    if (tambah($_POST) > 0) {
+    if (ubah($_POST) > 0) {
        echo "
        <script>
-          alert('data berhasil ditambahkan!');
+          alert('data berhasil diubah!');
          document.location.href ='admin_panel.php';
      </script>
        ";        
    } else {
        echo "
       <script>
-            alert('data gagal  ditambahkan!');
+            alert('data gagal  diubah!');
             document.location.href ='admin_panel.php';
         </script>
       ";     
@@ -152,26 +159,27 @@ if (isset($_POST["submit"])) {
                         <div class="row">
                             <!--form kiri-->
                             <div class="col-md-5 " style="padding-left: 30px;">
+                                <input type="hidden"  id="id"  name="id" require value="<?=$mhs["id"];?>">
 
                                 <div class="form-group">
                                     <label for="nama_mahasiswa" class="title-input-primary-username">Nama Lengkap</label>
-                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="nama_mahasiswa" aria-describedby="emailHelp" placeholder="Nama Lengkap" name="nama_mahasiswa" require>
+                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="nama_mahasiswa" aria-describedby="emailHelp" placeholder="Nama Lengkap" name="nama_mahasiswa" require value="<?=$mhs["nama_mahasiswa"];?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="fakultas_jurusan_semester" class="title-input-primary-username">Fakultas/Jurusan</label>
-                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="fakultas_jurusan_semester" aria-describedby="emailHelp" placeholder="Fakultas/Jurusan" name="fakultas_jurusan_semester" require>
+                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="fakultas_jurusan_semester" aria-describedby="emailHelp" placeholder="Fakultas/Jurusan" name="fakultas_jurusan_semester" require value="<?=$mhs["fakultas_jurusan_semester"];?>" >
                                 </div>
                                 <div class="form-group">
                                     <label for="tempat_tanggal_lahir" class="title-input-primary-username">Tempat dan Tanggal Lahir</label>
-                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="tempat_tanggal_lahir" aria-describedby="emailHelp" placeholder="Tempat dan Tanggal Lahir" name="tempat_tanggal_lahir" require>
+                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="tempat_tanggal_lahir" aria-describedby="emailHelp" placeholder="Tempat dan Tanggal Lahir" name="tempat_tanggal_lahir" require  value="<?=$mhs["tempat_tanggal_lahir"];?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="nama_org_tua" class="title-input-primary-username">Nama Orang Tua</label>
-                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="nama_org_tua" aria-describedby="emailHelp" placeholder="Nama Orang Tua" name="nama_org_tua" require>
+                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="nama_org_tua" aria-describedby="emailHelp" placeholder="Nama Orang Tua" name="nama_org_tua" require value="<?=$mhs["nama_org_tua"];?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="alamat_lengkap" class="title-input-primary-username">Alamat</label>
-                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="alamat_lengkap" aria-describedby="emailHelp" placeholder="Alamat" name="alamat_lengkap" require>
+                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="alamat_lengkap" aria-describedby="emailHelp" placeholder="Alamat" name="alamat_lengkap" require value="<?=$mhs["alamat_lengkap"];?>">
                                 </div>
 
 
@@ -183,18 +191,18 @@ if (isset($_POST["submit"])) {
 
                                 <div class="form-group">
                                     <label for="nim" class="title-input-primary-username">NIM</label>
-                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="nim" aria-describedby="emailHelp" placeholder="NIM" name="nim" require>
+                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="nim" aria-describedby="emailHelp" placeholder="NIM" name="nim" require value="<?=$mhs["nim"];?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="no_hp_mahasantri" class="title-input-primary-username">No
                                         HP</label>
-                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="no_hp_mahasantri" placeholder="No hp" name="no_hp_mahasantri" require>
+                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="no_hp_mahasantri" placeholder="No hp" name="no_hp_mahasantri" require value="<?=$mhs["no_hp_mahasantri"];?>">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="jalur_masuk" class="title-input-primary-username">
                                         Jalur Masuk:</label>
-                                    <select class="custom-select" name="jalur_masuk" id="jalur_masuk" require>
+                                    <select class="custom-select" name="jalur_masuk" id="jalur_masuk" require value="<?=$mhs["jalur_masuk"];?>">
                                         <option value="SNMPTN"> SNMPTN</option>
                                         <option value="SPAN PTKIN">SPAN PTKIN </option>
                                         <option value="SBMPTN">SBMPTN</option>
@@ -206,12 +214,12 @@ if (isset($_POST["submit"])) {
 
                                 <div class="form-group">
                                     <label for="no_hp_org_tua" class="title-input-primary-username">No HP Orang Tua/Wali</label>
-                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="no_hp_org_tua" placeholder="No HP Orang Tua/Wali" name="no_hp_org_tua" require>
+                                    <input type="text" class="form-control input-type-primary-tiketsaya" id="no_hp_org_tua" placeholder="No HP Orang Tua/Wali" name="no_hp_org_tua" require value="<?=$mhs["no_hp_org_tua"];?>">
                                 </div>
                                 <div class="form-group">
                                     <label for="nama_mabna" class="title-input-primary-username">
                                         Mabna:</label>
-                                    <select class="custom-select" id="nama_mabna" name="nama_mabna" require>
+                                    <select class="custom-select" id="nama_mabna" name="nama_mabna" require value="<?=$mhs["nama_mabna"];?>">
                                         <option value="Mabna Syekh Nawawi">Mabna Syekh Nawawi (Putra-Umum) </option>
                                         <option value="Mabna Syekh Abdul Karim">Mabna Syekh Abdul Karim (Putra-Umum) </option>
                                         <option value="Mabna Sultan  Hasanuddin ">Mabna Sultan Hasanuddin (Putra-Kedokteran)</option>
@@ -222,7 +230,7 @@ if (isset($_POST["submit"])) {
                                 </div>
 
 
-                                <button type="submit" class="btn btn-primary btn-primary-tiketsaya" id="submit" name="submit">Submit</button>
+                                <button type="submit" class="btn btn-primary btn-primary-tiketsaya" id="submit" name="submit">Ubah</button>
                                 <button type="reset" class="btn btn-primary btn-secondary-tiketsaya">Reset</button>
 
                             </div>
