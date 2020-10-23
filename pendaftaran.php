@@ -1,3 +1,12 @@
+<?php
+
+require 'fungction.php';
+$mahasiswa =query("SELECT * FROM mahasantri");
+
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -127,29 +136,29 @@
                             <div class="col-md-5 " style="padding-left: 30px;">
 
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1" class="title-input-primary-username">Nama Lengkap</label>
+                                    <label for="nama_mahasiswa" class="title-input-primary-username">Nama Lengkap</label>
                                     <input type="text" class="form-control input-type-primary-tiketsaya"
-                                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Lengkap">
+                                        id="nama_mahasiswa" aria-describedby="emailHelp" placeholder="Nama Lengkap" name="nama_mahasiswa">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1" class="title-input-primary-username">Fakultas/Jurusan</label>
+                                    <label for="Fakultas_Jurusan_Semester" class="title-input-primary-username">Fakultas/Jurusan</label>
                                     <input type="text" class="form-control input-type-primary-tiketsaya"
-                                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Fakultas/Jurusan">
+                                        id="Fakultas_Jurusan_Semester" aria-describedby="emailHelp" placeholder="Fakultas/Jurusan" id="Fakultas_Jurusan_Semester">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1" class="title-input-primary-username">Tempat  dan Tanggal Lahir</label>
+                                    <label for="tempat_tanggal_lahir" class="title-input-primary-username">Tempat  dan Tanggal Lahir</label>
                                     <input type="text" class="form-control input-type-primary-tiketsaya"
-                                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tempat dan Tanggal Lahir">
+                                        id="tempat_tanggal_lahir" aria-describedby="emailHelp" placeholder="Tempat dan Tanggal Lahir" name="tempat_tanggal_lahir">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1" class="title-input-primary-username">Nama Orang Tua</label>
+                                    <label for="nama_org_tua" class="title-input-primary-username">Nama Orang Tua</label>
                                     <input type="text" class="form-control input-type-primary-tiketsaya"
-                                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Orang Tua">
+                                        id="nama_org_tua" aria-describedby="emailHelp" placeholder="Nama Orang Tua" name="nama_org_tua">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1" class="title-input-primary-username">Alamat</label>
+                                    <label for="alamat_lengkap" class="title-input-primary-username">Alamat</label>
                                     <input type="text" class="form-control input-type-primary-tiketsaya"
-                                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Alamat">
+                                        id="alamat_lengkap" aria-describedby="emailHelp" placeholder="Alamat" name="alamat_lengkap">
                                 </div>
 
 
@@ -160,39 +169,39 @@
 
 
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1" class="title-input-primary-username">NIM</label>
+                                    <label for="nim" class="title-input-primary-username">NIM</label>
                                     <input type="text" class="form-control input-type-primary-tiketsaya"
-                                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="NIM">
+                                        id="nim" aria-describedby="emailHelp" placeholder="NIM" name="nim">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1" class="title-input-primary-username">No
+                                    <label for="no_hp_mahasantri" class="title-input-primary-username">No
                                         HP</label>
                                     <input type="text" class="form-control input-type-primary-tiketsaya"
-                                        id="exampleInputPassword1" placeholder="No hp">
+                                        id="no_hp_mahasantri" placeholder="No hp" name="no_hp_mahasantris">
                                 </div>
                             
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1" class="title-input-primary-username">
+                                    <label for="jalur_masuk" class="title-input-primary-username"  >
                                       Jalur Masuk:</label>
-                                    <select class="custom-select">                                        
+                                    <select class="custom-select" name="jalur_masuk" id="jalur_masuk">                                        
                                         <option value="SNMPTN" > SNMPTN</option>
-                                        <option value="SPAN PTKIN">Mabna Syekh Abdul Karim (Putra-Umum) </option>
+                                        <option value="SPAN PTKIN">SPAN PTKIN </option>
                                         <option value="SBMPTN">SBMPTN</option>
                                         <option value="UMPTKIN">UMPTKIN</option>
-                                        <option value="SPMB MANDIRI">Mabna Syarifah Khadijah (Putri-Kedokteran)</option>
+                                        
                                         
                                       </select>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1" class="title-input-primary-username">No HP Orang  Tua/Wali</label>
+                                    <label for="no_hp_org_tua" class="title-input-primary-username" >No HP Orang  Tua/Wali</label>
                                     <input type="text" class="form-control input-type-primary-tiketsaya"
-                                        id="exampleInputPassword1" placeholder="No HP Orang Tua/Wali">
+                                        id="no_hp_org_tua" placeholder="No HP Orang Tua/Wali" name="no_hp_org_tua">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1" class="title-input-primary-username">
+                                    <label for="nama_mabna" class="title-input-primary-username">
                                         Mabna:</label>
-                                    <select class="custom-select">                                        
+                                    <select class="custom-select" id="nama_mabna" name="nama_mabna">                                        
                                         <option value="Mabna Syekh Nawawi" >Mabna Syekh Nawawi (Putra-Umum) </option>
                                         <option value="Mabna Syekh Abdul Karim">Mabna Syekh Abdul Karim (Putra-Umum) </option>
                                         <option value="Mabna Sultan  Hasanuddin ">Mabna Sultan  Hasanuddin (Putra-Kedokteran)</option>
@@ -203,7 +212,7 @@
                                 </div>
                                
 
-                                <button type="submit" class="btn btn-primary btn-primary-tiketsaya">Submit</button>
+                                <button type="submit" class="btn btn-primary btn-primary-tiketsaya" id="submit">Submit</button>
                                 <button type="reset" class="btn btn-primary btn-secondary-tiketsaya">Reset</button>
 
                             </div>

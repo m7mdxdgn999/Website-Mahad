@@ -1,3 +1,12 @@
+<?php
+
+require 'fungction.php';
+$mahasiswa =query("SELECT * FROM mahasantri");
+
+
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -14,7 +23,7 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/0801180830.js" crossorigin="anonymous"></script>
-        <title>Sales - MSN</title>
+        <title>Admin Panel</title>
 </head>
 
 <body>
@@ -78,8 +87,8 @@
         <!-- header -->
         <div class="row header">
             <div class="col-md-12">
-                <p class="header-title"> Ticket Saya</p>
-                <p class="sub-header-title">The item are bought around the world</p>
+                <p class="header-title"> Admin Panel</p>
+                
             </div>
         </div>
         <!-- akhir header -->
@@ -97,45 +106,34 @@
                     <table class="table table-borderless table-tiketsaya">
                         <thead>
                           <tr>
-                            <th scope="col">Pictures</th>
-                            <th scope="col">Nama User</th>
-                            <th scope="col">Jabatan</th>
-                            <th scope="col">Sisa Balance</th>
-                            <th scope="col">Menu</th>
+                            <th scope="col">no </th>
+                            <th scope="col">Aksi </th>
+                            <th scope="col">Nama </th>
+                            <th scope="col">NIM</th>
+                            <th scope="col">Mabna</th>
+                            <th scope="col">Profile</th>
                           </tr>
                         </thead>
                         <!-- akhir head -->
                         <!-- body -->
                         <tbody>
+
+                            <?php $i=1; ?>
+                            <?php foreach ($mahasiswa as $row) : ?>
                           <tr>
-                            <td scope="row user-table-item"> <img src="images/muhammad.jpeg" alt="" class="user-table-item"> </td>
-                            <td>Muhammad</td>
-                            <td>Mudabbir</td>
-                            <td>US$123</td>
+                            <td scope="row user-table-item"> <?=$i; ?></td>
+                            <td>
+                                <a href=""> ubah |</a>
+                                <a href=""> hapus</a>
+                            </td>
+                            <td><?= $row["nama_mahasiswa"]; ?></td>
+                            <td><?=$row["nim"]; ?></td>
+                            <td><?=$row["nama_mabna"]; ?></td>
                             <td><a href="sales_detail.html" class="btn-small-table btn-primary ">Details</a></td>
                           </tr>
-                         
-                          <tr>
-                            <td scope="row user-table-item"> <img src="images/acep.jpg" alt="" class="user-table-item"> </td>
-                            <td>Acep</td>
-                            <td>Mudabbir</td>
-                            <td>US$14</td>
-                            <td><a href="" class="btn-small-table btn-primary ">Details</a></td>
-                          </tr>
-                          <tr>
-                            <td scope="row user-table-item"> <img src="images/gugun.jpg" alt="" class="user-table-item"> </td>
-                            <td>Gugun</td>
-                            <td>mahasantri</td>
-                            <td>US$0</td>
-                            <td><a href="" class="btn-small-table btn-primary ">Details</a></td>
-                          </tr>
-                          <tr>
-                            <td scope="row user-table-item"> <img src="images/amin.jpg" alt="" class="user-table-item"> </td>
-                            <td>Amin</td>
-                            <td>mahasantri</td>
-                            <td>US$155</td>
-                            <td><a href="" class="btn-small-table btn-primary ">Details</a></td>
-                          </tr>
+                            <?php $i++; ?>
+                            <?php endforeach; ?>
+                          
                           
                         </tbody>
                         <!-- akhir body -->
