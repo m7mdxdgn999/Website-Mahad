@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+if (isset ($_SESSION["login"])){
+    header("Location:admin_panel.php");
+    exit;
+
+}
+
 require 'fungction.php';
 
 if (isset($_POST["login"])) {
@@ -14,6 +22,10 @@ if (isset($_POST["login"])) {
     //cek password
     $row =mysqli_fetch_assoc($result);
     if (password_verify($password, $row [ "password"]) ) {
+
+        //set session
+        $_SESSION["login"]=true;
+
         header("Location: admin_panel.php");
         exit;
 

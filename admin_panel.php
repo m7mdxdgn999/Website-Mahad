@@ -1,5 +1,10 @@
 <?php
+session_start();
+if (!isset ($_SESSION["login"])){
+    header("Location:login.php");
+    exit;
 
+}
 require 'fungction.php';
 $mahasiswa = query("SELECT * FROM mahasantri");
 
@@ -59,18 +64,18 @@ if(isset ($_POST ["cari"])){
                     </a>
                 </div>
                 <div class="item-menu inactive">
-                    <a href="customer.html">
-                        <p class="icon-item-menu "> <i class="far fa-user"></i></p>
+                    <a href="logout.php">
+                        <p class="icon-item-menu "><i  class="fas fa-power-off"></i></p>
                     </a>
                 </div>
                 <div class="item-menu inactive">
                     <a href="setting.html">
-                        <p class="icon-item-menu "> <i class="fas fa-cog"></i></p>
+                        <p class="icon-item-menu "> <i  class="fas fa-power-off"></i></p>
                     </a>
                 </div>
                 <div class="item-menu inactive">
                     <a href="#">
-                        <p class="icon-item-menu"><i class="fas fa-power-off"></i></p>
+                        <p hidden class="icon-item-menu"><i hidden class="fas fa-power-off"></i></p>
                     </a>
                 </div>
             </div>
@@ -95,14 +100,14 @@ if(isset ($_POST ["cari"])){
                 <a href="wisata.html">
                     <li style="margin-top: -13px;">Manage Wisata</li>
                 </a>
-                <a href="customer.html">
-                    <li style="margin-top: -15px;">Customer <span class="badge badge-primary badge-tiketsaya">30</span></li>
+                <a href="logout.php">
+                    <li style="margin-top: -15px;">Log out </li>
                 </a>
                 <a href="setting.html">
                     <li style="margin-top: -12px;">Account setting</li>
                 </a>
-                <a href="logout.html">
-                    <li style="padding-top: 120px;">Log out</li>
+                <a hidden href="logout.html">
+                    <li hidden style="padding-top: 120px;">Log out</li>
                 </a>
             </ul>
         </div>
