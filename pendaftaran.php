@@ -52,7 +52,7 @@ if (isset($_POST["submit"])) {
         <div class="shortcut" onmouseover="showAdminProfile()">
             <!-- emblem -->
             <div class="emblem text-center">
-                <img src="images/PUTIHLOGO.png" height="49" alt="">
+                <img src="images/Logo_UIN_Syarif_Hidayatullah_Jakarta.png" height="49" alt="">
             </div>
             <!-- akhir emblem -->
             <!-- menus -->
@@ -62,29 +62,29 @@ if (isset($_POST["submit"])) {
                         <p class="icon-item-menu"><i class="fab fa-delicious"></i></p>
                     </a>
                 </div>
-                <div class="item-menu inactive ">
-                    <a href="sales.html">
-                        <p class="icon-item-menu"><i class="fas fa-ticket-alt"></i></p>
-                    </a>
-                </div>
                 <div class="item-menu  ">
-                    <a href="wisata.html">
-                        <p class="icon-item-menu "><i class="fas fa-globe"></i></p>
+                    <a href="pendaftaran.php">
+                        <p class="icon-item-menu"><i class="fas fa-hotel"></i></p>
+                    </a>
+                </div>
+                <div class="item-menu inactive ">
+                    <a href="admin_panel.php">
+                        <p class="icon-item-menu "><i class="fas fa-users-cog"></i></p>
                     </a>
                 </div>
                 <div class="item-menu inactive">
-                    <a href="customer.html">
-                        <p class="icon-item-menu "> <i class="far fa-user"></i></p>
+                    <a href="logout.php">
+                        <p class="icon-item-menu "> <i class="fas fa-power-off"></i></p>
                     </a>
                 </div>
                 <div class="item-menu inactive">
-                    <a href="setting.html">
-                        <p class="icon-item-menu "> <i class="fas fa-cog"></i></p>
+                    <a hidden href="setting.html">
+                        <p class="icon-item-menu "> <i hidden class="fas fa-cog"></i></p>
                     </a>
                 </div>
                 <div class="item-menu inactive">
-                    <a href="#">
-                        <p class="icon-item-menu"><i class="fas fa-power-off"></i></p>
+                    <a hidden href="#">
+                        <p class="icon-item-menu"><i hidden class="fas fa-power-off"></i></p>
                     </a>
                 </div>
             </div>
@@ -95,29 +95,29 @@ if (isset($_POST["submit"])) {
         <!-- adimn profile -->
         <div class="admin-profile " id="sl_ap" onmouseover="showAdminProfile()" onmouseout="hideAdminProfile()">
             <div class="admin-picture text-center">
-                <img src="images/muhammad.jpeg" alt="" class="rounded-circle">
+                <img src="images/Logo_UIN_Syarif_Hidayatullah_Jakarta.png" alt="" class="rounded-circle">
             </div>
-            <p class="admin-name">Muhammad</p>
-            <p class="admin-level">Mudabbir</p>
+            <p class="admin-name">Ma'had Al-jamiah</p>
+            <p class="admin-level">UIN Syarif Hidayatullah Jakarta</p>
             <ul class="admin-menus">
                 <a href="dashboard.html">
-                    <li>My Dashboard</li>
+                    <li>Mahad</li>
                 </a>
-                <a href="sales.html">
-                    <li style="margin-top:-12px ;">Ticket Sales</li>
+                <a href="pendaftaran.php">
+                    <li style="margin-top:-12px ;" class="active-link">Pendaftaran</li>
                 </a>
-                <a href="wisata.html">
-                    <li style="margin-top: -13px;" class="active-link">Manage Wisata</li>
+                <a href="admin_panel.php">
+                    <li style="margin-top: -13px;" >Admin Panel</li>
                 </a>
-                <a href="customer.html">
-                    <li style="margin-top: -15px;">Customer <span class="badge badge-primary badge-tiketsaya">30</span>
+                <a href="logout.php">
+                    <li style="margin-top: -15px;">Log out 
                     </li>
                 </a>
-                <a href="setting.html">
-                    <li style="margin-top: -12px;">Account setting</li>
+                <a hidden href="setting.html">
+                    <li hidden style="margin-top: -12px;">Account setting</li>
                 </a>
-                <a href="logout.html">
-                    <li style="padding-top: 120px;">Log out</li>
+                <a hidden href="logout.html">
+                    <li hidden style="padding-top: 120px;">Log out</li>
                 </a>
             </ul>
         </div>

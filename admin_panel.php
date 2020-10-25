@@ -43,7 +43,7 @@ if(isset ($_POST ["cari"])){
         <div class="shortcut" onmouseover="showAdminProfile()">
             <!-- emblem -->
             <div class="emblem text-center">
-                <img src="images/PUTIHLOGO.png" height="49" alt="">
+                <img src="images/Logo_UIN_Syarif_Hidayatullah_Jakarta.png" height="49" alt="">
             </div>
             <!-- akhir emblem -->
             <!-- menus -->
@@ -54,13 +54,13 @@ if(isset ($_POST ["cari"])){
                     </a>
                 </div>
                 <div class="item-menu  ">
-                    <a href="sales.html">
-                        <p class="icon-item-menu"><i class="fas fa-ticket-alt"></i></p>
+                    <a href="pendaftaran.php">
+                        <p class="icon-item-menu"><i class="fas fa-hotel"></i></p>
                     </a>
                 </div>
                 <div class="item-menu inactive ">
-                    <a href="wisata.html">
-                        <p class="icon-item-menu "><i class="fas fa-globe"></i></p>
+                    <a href="admin_panel.php">
+                        <p class="icon-item-menu "><i class="fas fa-users-cog"></i></p>
                     </a>
                 </div>
                 <div class="item-menu inactive">
@@ -69,8 +69,8 @@ if(isset ($_POST ["cari"])){
                     </a>
                 </div>
                 <div class="item-menu inactive">
-                    <a href="setting.html">
-                        <p class="icon-item-menu "> <i  class="fas fa-power-off"></i></p>
+                    <a href="setting.html" hidden>
+                        <p class="icon-item-menu "> <i hidden  class="fas fa-power-off"></i></p>
                     </a>
                 </div>
                 <div class="item-menu inactive">
@@ -86,25 +86,25 @@ if(isset ($_POST ["cari"])){
         <!-- adimn profile -->
         <div class="admin-profile " id="sl_ap" onmouseover="showAdminProfile()" onmouseout="hideAdminProfile()">
             <div class="admin-picture text-center">
-                <img src="images/muhammad.jpeg" alt="" class="rounded-circle">
+                <img src="images/Logo_UIN_Syarif_Hidayatullah_Jakarta.png" alt="" class="rounded-circle">
             </div>
-            <p class="admin-name">Muhammad</p>
-            <p class="admin-level">Mudabbir</p>
+            <p class="admin-name">Ma'had Al-jamiah</p>
+            <p class="admin-level">UIN Syarif Hidayatullah Jakarta</p>
             <ul class="admin-menus">
                 <a href="dashboard.html">
-                    <li>My Dashboard</li>
+                    <li>Mahad</li>
                 </a>
-                <a href="sales.html">
-                    <li style="margin-top:-12px ;" class="active-link">Ticket Sales</li>
+                <a href="pendaftaran.php">
+                    <li style="margin-top:-12px ;" class="active-link">Pendaftaran</li>
                 </a>
                 <a href="wisata.html">
-                    <li style="margin-top: -13px;">Manage Wisata</li>
+                    <li style="margin-top: -13px;">Admin Panel</li>
                 </a>
                 <a href="logout.php">
                     <li style="margin-top: -15px;">Log out </li>
                 </a>
                 <a href="setting.html">
-                    <li style="margin-top: -12px;">Account setting</li>
+                    <li hidden style="margin-top: -12px;">Account setting</li>
                 </a>
                 <a hidden href="logout.html">
                     <li hidden style="padding-top: 120px;">Log out</li>

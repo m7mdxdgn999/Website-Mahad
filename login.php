@@ -62,7 +62,7 @@ if (isset($_POST["login"])) {
         <!-- logo header sign in -->
         <div class="row header-sign-in">
             <div class="col-md-12 text-center  ">
-                <img src="images/hitam_logo.png  " height="100px">
+                <img src="images/Logo_UIN_Syarif_Hidayatullah_Jakarta.png  " height="100px">
             </div>
         </div>
         <!-- akhir logo header sign in -->
